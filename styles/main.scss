@@ -7,12 +7,6 @@
  */
 @import '_h5bp';
 
-/*
- * Visual Style Guide styles
- * Remove if you prefer to use a CSS library, like Bootstrap
- */
-@import 'components/components';
-
 html,
 body {
   width: 100%;
@@ -40,7 +34,7 @@ body.open {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #4285f4;
+  background-color: #069209;
   overflow: hidden;
   z-index: 1;
 }
@@ -82,7 +76,6 @@ body.open {
 .app-bar .logo a {
   text-decoration: none;
   color: inherit;
-  font-weight: normal;
 }
 
 .app-bar-actions {
@@ -153,7 +146,7 @@ ol {
   bottom: 0;
   width: 250px;
   height: 100%;
-  background-color: #3367D6;
+  background-color: #069209;
   color: #fefefe;
   -webkit-transform: translate(-250px, 0);
           transform: translate(-250px, 0);
@@ -174,14 +167,15 @@ main {
 
 .navdrawer-container h4,
 .navdrawer-container ul li a {
-  height: 60px;
   padding: 17px 20px;
   line-height: 1.4;
 }
 
 .navdrawer-container h4 {
-  background-color: white;
-  color: #3367D6;
+  font-size: 24px;
+  background-color: #069209;
+  color: #fff;
+  margin: 0;
 }
 
 .navdrawer-container ul {
@@ -199,11 +193,11 @@ main {
   white-space: nowrap;
 }
 
+.navdrawer-container h4,
 .navdrawer-container ul li {
   border-bottom-style: solid;
   border-width: 1px;
   border-color: white;
-  padding: 0;
 }
 
 .navdrawer-container ul li::before {
@@ -223,11 +217,27 @@ main {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
+p{
+    padding: 0;
+    margin: 0;
+}
+
 main {
   margin: 0 auto;
   /* Height of the header */
-  padding: 60px 16px 16px 16px;
   min-height: 100%;
+  height: 100%;
+}
+
+.section {
+  min-height: 100%;
+    padding: 0px 16px;
+}
+
+h1,
+h2 {
+  padding-top: 70px;
+  -webkit-margin-before: 0;
 }
 
 /** Larger Screens - desktops and tablets **/
