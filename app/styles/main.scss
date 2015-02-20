@@ -17,7 +17,7 @@ body {
 	position: relative;
 	font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
 	font-weight: 300;
-	background-color: #fff;
+	background-image: url("../images/background.png");
 	box-sizing: border-box;
 	min-height: 100%;
 }
@@ -197,10 +197,11 @@ main {
 .section {
 	padding: 0px 3.33%;
 	width: 93.33%;
+	background-color: #fff;
 }
 .section .image-wrap{
 	width: 100%;
-	max-height: 250px;
+	max-height: 500px;
 	overflow:hidden;
 }
 .section img{
@@ -223,9 +224,16 @@ h1, h2 {
 /** Larger Screens - desktops**/
 
 @media all and (min-width: 990px) {
+	.home 
 	.content {
-		width: 33.33%;
-		box-sizing: border-box;
+		width: 28.89%;
+	}
+	main {
+		max-width: 1400px;
+		padding-top: 10px;
+		min-height: initial;
+		position: relative;
+		top: 0px;
 	}
 	.app-bar {
 		position: relative;
@@ -235,15 +243,16 @@ h1, h2 {
 		transform: translate(0px, 0);
 	}
 	.app-bar-container {
-		display: block;
 		height: 130px;
-		max-width: 864px;
-		padding: 0 16px;
+		max-width: 1024px;
 		box-sizing: border-box;
-		background-color: #4285f4;
+		background-color: #069209;
+		align-items: center;
+		justify-content: center;
 	}
 	.app-bar .logo {
 		float: left;
+		flex: none;
 		margin: 0;
 		padding: 0;
 		line-height: 130px;
@@ -263,9 +272,9 @@ h1, h2 {
 		display: none;
 	}
 	.navdrawer-container {
-		position: fixed;
-		top: 130px;
-		width: 20%;
+		position: relative;
+		width: 100%;
+		height: auto;
 		margin-top: 0;
 		-webkit-transform: translate(0, 0);
 		transform: translate(0, 0);
@@ -280,24 +289,15 @@ h1, h2 {
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
-		max-width: 20%;
 		margin: 0 auto;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-webkit-margin-before: 0px;
-		-webkit-margin-after: 0px;
-		-webkit-margin-start: 0px;
-		-webkit-margin-end: 0px;
-		-webkit-padding-start: 00px;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 	}
 	.navdrawer-container ul li {
 		border: none;
-	}
-	main {
-		max-width: 864px;
-		padding-top: 0;
-		min-height: initial;
 	}
 	body {
 		overflow-y: scroll;
