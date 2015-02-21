@@ -182,7 +182,7 @@ backface-visibility: hidden;
 	background-color: rgba(255, 255, 255, 0.4);
 }
 main {
-	margin: 0 auto;
+	margin: 0 15px;
 	position: absolute;
 	top: 75px;
 	
@@ -195,8 +195,8 @@ main {
 	flex-flow: row wrap;
 }
 .section {
-	padding: 0px 3.33%;
-	width: 93.33%;
+	margin-bottom: 15px;
+	width: 100%;
 	background-color: #fff;
 }
 .section .image-wrap{
@@ -206,6 +206,21 @@ main {
 }
 .section img{
 	width: 100%;
+}
+.section a{
+	background-color: #069209;
+	color: #fefefe;
+	position: relative;
+	float: left;
+	top: -80px;
+	left: -5px;
+	padding: 5px 20px;
+	margin-bottom: -57px;
+	font-weight: 300;
+	font-size: 28px;
+}
+.section p{
+	margin: 20px;
 }
 h1, h2 {
 	padding: 0;
