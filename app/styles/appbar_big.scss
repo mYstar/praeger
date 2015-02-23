@@ -1,0 +1,34 @@
+// the styling of the app-bar for desktop size
+.app-bar {
+	position: relative;
+}
+.app-bar.open, .app-bar.open ~ main {
+	-webkit-transform: translate(0px, 0);
+	transform: translate(0px, 0);
+}
+.app-bar-container {
+	height: 130px;
+	max-width: $content_width;
+	align-items: center;
+	justify-content: center;
+}
+.app-bar .logo {
+	flex: none;
+	margin: 0;
+	padding: 0;
+	line-height: 130px;
+	font-size: 46px;
+}
+.app-bar-actions {
+	float: right;
+}
+.app-bar::after {
+	content: ' ';
+	display: block;
+	height: 0;
+	overflow: hidden;
+	clear: both;
+}
+button.menu {
+	display: none;
+}

@@ -1,0 +1,81 @@
+// all stylings from the app-bar for small displays (smartphone, tablet) are here
+
+.app-bar {
+	display: block;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: $green;
+	overflow: hidden;
+	z-index: 1;
+}
+.app-bar-container {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	height: $appbar_height;
+	position: relative;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	margin: 0 auto;
+}
+.app-bar.open, .app-bar.open ~ main {
+	-webkit-transform: translate($navi_width, 0);
+	transform: translate($navi_width, 0);
+}
+.app-bar .logo {
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	font-size: 2em;
+	line-height: $appbar_height;
+	margin: 0 16px;
+	padding: 0;
+	color: $white;
+	float: none;
+	max-width: none;
+	font-weight: 300;
+	display: initial;
+}
+.app-bar .logo a {
+	text-decoration: none;
+	color: inherit;
+}
+.app-bar-actions {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	z-index: 2;
+}
+.app-bar button {
+	width: $appbar_height;
+	height: $appbar_height;
+	background-image: none;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	display: inline-block;
+	-webkit-transition: background-color 0.2s ease-out;
+	transition: background-color 0.2s ease-out;
+	-webkit-tap-highlight-color: transparent;
+}
+.app-bar button img {
+	height: 24px;
+	width: 24px;
+}
+.app-bar button:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+.app-bar button:focus {
+	background-color: rgba(255, 255, 255, 0.2);
+	outline: 0;
+}
+.app-bar button:active {
+	background-color: rgba(255, 255, 255, 0.4);
+}
