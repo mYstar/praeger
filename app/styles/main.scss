@@ -10,7 +10,7 @@ body {
 	position: relative;
 	font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
 	font-weight: 300;
-	background-image: url("../images/background.png");
+	background-color: $blackdivide;
 	box-sizing: border-box;
 	min-height: 100%;
 }
@@ -36,7 +36,8 @@ main {
 .section {
 	margin-bottom: $content_margin;
 	width: 100%;
-	background-color: $white;
+	background-color: $whiteprimary;
+	@include shadow(1);
 }
 .section .image-wrap{
 	width: 100%;
@@ -47,8 +48,8 @@ main {
 	width: 100%;
 }
 .section a{
-	background-color: $green;
-	color: $white;
+	background-color: $main;
+	color: $whiteprimary;
 	position: relative;
 	float: left;
 	top: -80px;
@@ -61,6 +62,7 @@ main {
 .section p{
 	margin: 20px;
 	font-size: 19px;
+	color: $blackprimary;
 }
 
 .promote-layer {

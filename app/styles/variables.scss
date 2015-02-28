@@ -1,6 +1,22 @@
-//colors
-$green: #069209;
-$white: #fefefe;
+// main colors
+$main: #00864D;
+$mainlight: #00A650;
+$fallback: #A8EBC7;
+
+// highlight color
+$highlight: #FFF200;
+
+// whites:
+$whiteprimary: #FFFFFF;
+$whitesecondary: #B2B2B2;
+$whitehint: #4C4C4C;
+$whitedivide: #1E1E1E;
+
+//blacks:
+$blackprimary: #212121;
+$blacksecondary: #757575;
+$blackhint: #BCBCBC;
+$blackdivide: #E0E0E0;
 
 //sizes
 $navi_width: 220px;
@@ -10,6 +26,21 @@ $appbar_height: 60px;
 
 $content_margin: 15px;
 
-// backgroud patterns
-//$back_pattern: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAKElEQVQIW2Nki2P7z2LMwvDv+T8GRq6JXP9BjH/PgByOCo7/IAZIFgA+8RCYroFx+gAAAABJRU5ErkJggg==) repeat 
-$back_pattern: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAKElEQVQIW2Nkm8TxnwEGnv1jYIQLADkMUkxQASgHpJCRrYLtP0gGBgDrZQxl3OonhAAAAABJRU5ErkJggg==) repeat 
+//shadows
+@mixin shadow($level){
+    @if $level == 1{
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+    @if $level == 2{
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    @if $level == 3{
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    @if $level == 4{
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    @if $level == 5{
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+}

@@ -6,7 +6,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: $back_pattern;
+	background-color: $main;
 	z-index: 1;
 }
 .app-bar-container {
@@ -20,7 +20,7 @@
 	-ms-flex-direction: row;
 	flex-direction: row;
 	margin: 0 auto;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	@include shadow(2);
 }
 .app-bar.open, .app-bar.open ~ main {
 	-webkit-transform: translate($navi_width, 0);
@@ -34,7 +34,7 @@
 	line-height: $appbar_height;
 	margin: 0 16px;
 	padding: 0;
-	color: $white;
+	color: $whiteprimary;
 	float: none;
 	max-width: none;
 	font-weight: 300;
