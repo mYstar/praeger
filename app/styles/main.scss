@@ -6,7 +6,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-body {
+.body {
 	position: relative;
 	font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
 	font-weight: 300;
@@ -14,7 +14,7 @@ body {
 	box-sizing: border-box;
 	min-height: 100%;
 }
-body.open {
+.body.open {
 	overflow: hidden;
 }
 main {
@@ -29,15 +29,22 @@ main {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-flow: row wrap;
-	-ms-flex-flow: row wrap;
-	    flex-flow: row wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 }
 .section {
 	margin-bottom: $content_margin;
 	width: 100%;
 	background-color: $whiteprimary;
 	@include shadow(1);
+
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
 }
 .section .image-wrap{
 	width: 100%;
@@ -60,7 +67,8 @@ main {
 	font-size: 28px;
 }
 .section p{
-	margin: 20px;
+	margin: 0;
+	padding: 20px;
 	font-size: 19px;
 	color: $blackprimary;
 }

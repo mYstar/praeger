@@ -12,27 +12,32 @@
 .app-bar-container {
 	display: -webkit-flex;
 	display: -ms-flexbox;
+	display: -webkit-box;
 	display: flex;
 	width: 100%;
 	height: $appbar_height;
 	position: relative;
 	-webkit-flex-direction: row;
 	-ms-flex-direction: row;
-	flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
 	margin: 0 auto;
 	@include shadow(2);
 }
 .app-bar.open, .app-bar.open ~ main {
 	-webkit-transform: translate($navi_width, 0);
-	transform: translate($navi_width, 0);
+	-ms-transform: translate($navi_width, 0);
+	    transform: translate($navi_width, 0);
 }
 .app-bar .logo {
 	-webkit-flex: 1;
 	-ms-flex: 1;
-	flex: 1;
+	-webkit-box-flex: 1;
+	        flex: 1;
 	font-size: 28px;
 	line-height: $appbar_height;
-	margin: 0 16px;
+	margin: 0 16px 0 72px ;
 	padding: 0;
 	color: $whiteprimary;
 	float: none;
@@ -47,10 +52,13 @@
 .app-bar-actions {
 	display: -webkit-flex;
 	display: -ms-flexbox;
+	display: -webkit-box;
 	display: flex;
 	-webkit-flex-direction: row;
 	-ms-flex-direction: row;
-	flex-direction: row;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
 	z-index: 2;
 }
 .app-bar button {
@@ -64,6 +72,10 @@
 	-webkit-transition: background-color 0.2s ease-out;
 	transition: background-color 0.2s ease-out;
 	-webkit-tap-highlight-color: transparent;
+
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 .app-bar button img {
 	height: 24px;
