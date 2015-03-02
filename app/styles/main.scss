@@ -10,7 +10,6 @@ html, body {
 	position: relative;
 	font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
 	font-weight: 300;
-	background-color: $blackdivide;
 	box-sizing: border-box;
 	min-height: 100%;
 }
@@ -18,12 +17,13 @@ html, body {
 	overflow: hidden;
 }
 main {
-	margin: $content_margin $content_margin 0 $content_margin;
+	padding: $content_margin $content_margin 0 $content_margin;
 	position: absolute;
 	top: $appbar_height;
 
 	/* Height of the header */
 	min-height: 100%;
+	background-color: $blackdivide;
 
 	display: -webkit-flex;
 	display: -webkit-box;

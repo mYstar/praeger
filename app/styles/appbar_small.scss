@@ -35,15 +35,11 @@
 	-ms-flex: 1;
 	-webkit-box-flex: 1;
 	        flex: 1;
-	font-size: 28px;
-	line-height: $appbar_height;
-	margin: 0 16px 0 72px ;
-	padding: 0;
-	color: $whiteprimary;
-	float: none;
-	max-width: none;
-	font-weight: 300;
-	display: initial;
+	height: 32px;
+	margin: 0 16px 0 60px;
+
+	position: relative;
+	top: 12px;
 }
 .app-bar .logo a {
 	text-decoration: none;
@@ -58,7 +54,7 @@
 	-ms-flex-direction: row;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	        flex-direction: row;
+	flex-direction: row;
 	z-index: 2;
 }
 .app-bar button {
