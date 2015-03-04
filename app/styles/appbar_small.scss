@@ -14,47 +14,46 @@
 	display: -ms-flexbox;
 	display: -webkit-box;
 	display: flex;
+	-webkit-flex-flow: row nowrap;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+
 	width: 100%;
 	height: $appbar_height;
 	position: relative;
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	        flex-direction: row;
 	margin: 0 auto;
 	@include shadow(2);
 }
 .app-bar.open, .app-bar.open ~ main {
 	-webkit-transform: translate($navi_width, 0);
 	-ms-transform: translate($navi_width, 0);
-	    transform: translate($navi_width, 0);
+	transform: translate($navi_width, 0);
+}
+.app-bar.search, .app-bar.search ~ main {
+	-webkit-transform: translate(-$search_width, 0);
+	-ms-transform: translate(-$search_width, 0);
+	transform: translate(-$search_width, 0);
 }
 .app-bar .logo {
-	-webkit-flex: 1;
-	-ms-flex: 1;
-	-webkit-box-flex: 1;
-	        flex: 1;
 	height: 32px;
-	margin: 0 16px 0 60px;
-
-	position: relative;
-	top: 12px;
 }
-.app-bar .logo a {
+.app-bar a {
+	flex: 0 1 auto;
+	order: 2;
 	text-decoration: none;
 	color: inherit;
 }
 .app-bar-actions {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: -webkit-box;
-	display: flex;
-	-webkit-flex-direction: row;
-	-ms-flex-direction: row;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	flex-direction: row;
+	flex: 0 1 auto;
+	order: 3;
 	z-index: 2;
 }
 .app-bar button {
@@ -69,13 +68,18 @@
 	transition: background-color 0.2s ease-out;
 	-webkit-tap-highlight-color: transparent;
 
-	position: absolute;
-	left: 0;
-	top: 0;
 }
-.app-bar button img {
+.app-bar button.menu {
+	flex: 0 1 auto;
+	order: 1;
+}
+.app-bar button.menu img {
 	height: 24px;
 	width: 24px;
+}
+.app-bar button img.icon{
+	height: 32px;
+	width: 32px;
 }
 .app-bar button:hover {
 	background-color: rgba(255, 255, 255, 0.1);

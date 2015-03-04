@@ -3,3 +3,4 @@ node_modules
 dist
 .tmp
 npm-debug.log
+app/images/source/material-design-icons-1.0.0

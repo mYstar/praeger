@@ -22,15 +22,20 @@
   var querySelector = document.querySelector.bind(document);
 
   var navdrawerContainer = querySelector('.navdrawer-container');
+  var searchdrawerContainer = querySelector('.searchdrawer-container');
   var body = querySelector('.body');
   var appbarElement = querySelector('.app-bar');
   var menuBtn = querySelector('.menu');
+  var searchBtn = querySelector('.search');
   var main = querySelector('main');
 
   function closeMenu() {
     body.classList.remove('open');
+    body.classList.remove('search');
     appbarElement.classList.remove('open');
+    appbarElement.classList.remove('search');
     navdrawerContainer.classList.remove('open');
+    searchdrawerContainer.classList.remove('search');
   }
 
   function toggleMenu() {
@@ -40,11 +45,33 @@
     navdrawerContainer.classList.add('opened');
   }
 
+  function toggleSearch() {
+    body.classList.toggle('search');
+    appbarElement.classList.toggle('search');
+    searchdrawerContainer.classList.toggle('search');
+    searchdrawerContainer.classList.add('searched');
+  }
+
   main.addEventListener('click', closeMenu);
   menuBtn.addEventListener('click', toggleMenu);
+  searchBtn.addEventListener('click', toggleSearch);
+
   navdrawerContainer.addEventListener('click', function (event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
       closeMenu();
     }
   });
 })();
+
+var $cells = $("li");
+
+$("#search").keyup(function() {
+    var val = $.trim(this.value).toUpperCase();
+    if (val === "")
+        $cells.parent().show();
+    else {
+        $cells.parent().hide();
+        $cells.filter(function() {
+            return -1 != $(this).text().toUpperCase().indexOf(val); }).parent().show();
+    }
+});
