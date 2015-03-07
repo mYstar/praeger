@@ -7,17 +7,21 @@
 	transform: translate(0px, 0);
 }
 .app-bar-container {
-	height: 130px;
 	max-width: $content_width;
 	align-items: center;
 	justify-content: center;
+	height: auto;
+
+	@include shadow(0);
+}
+.app-bar a {
+	margin: 0;
 }
 .app-bar .logo {
 	flex: none;
-	margin: 0;
+	margin: 30px;
 	padding: 0;
-	line-height: 130px;
-	font-size: 46px;
+	height: 180px;
 }
 .app-bar-actions {
 	float: right;

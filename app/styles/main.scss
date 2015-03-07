@@ -5,6 +5,8 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+
+	background-color: $blackdivide;
 }
 .body {
 	position: relative;
@@ -18,8 +20,9 @@ html, body {
 	overflow: hidden;
 }
 main {
-	padding: $content_margin $content_margin 0 $content_margin;
-	position: absolute;
+	padding: $content_margin;
+	margin: 0 auto;
+	position: relative;
 	top: $appbar_height;
 
 	/* Height of the header */
@@ -45,11 +48,8 @@ main {
 	@include shadow(1);
 
 	-webkit-box-flex: 0;
-
 	-webkit-flex: 0 0 auto;
-
 	-ms-flex: 0 0 auto;
-
 	flex: 0 0 auto;
 }
 .section .image-wrap{
@@ -83,6 +83,41 @@ main {
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
+
+.footer {
+	background-color: $main;
+	padding: 20px;
+	position: relative;
+	top: $appbar_height;
+
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+}
+.footer div {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
+	width: 100%;
+	margin-bottom: 16px;
+
+	color: $whiteprimary;
+	font-size: 16px;
+	text-align: center;
+}
+.footer div a{
+	color: $whiteprimary;
+	font-weight: 400;
+	text-decoration: none;
+}
 @import 'appbar_small';
 @import 'navigation_small';
 
@@ -106,18 +141,22 @@ main {
 /** Larger Screens - desktops**/
 
 @media all and (min-width: 990px) {
-	.home 
 	.content {
-		width: 28.89%;
+		width: 32%;
 	}
 	main {
 		max-width: $content_width;
-		min-height: initial;
 		position: relative;
 		top: 0px;
 	}
 	body {
 		overflow-y: scroll;
+	}
+	.section .image-wrap{
+		max-height: 700px;
+	}
+	.footer {
+		position: static;
 	}
 	@import 'appbar_big';
 	@import 'navigation_big';

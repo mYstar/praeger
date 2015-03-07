@@ -9,6 +9,8 @@
 	-webkit-transition: none;
 	transition: none;
 	overflow-y: auto;
+
+	@include shadow(2);
 }
 .navdrawer-container h4 {
 	display: none;
@@ -26,4 +28,6 @@
 }
 .navdrawer-container ul li a {
 	border: 0;
+	font-size: 28px;
+	padding: 12px 28px;
 }
