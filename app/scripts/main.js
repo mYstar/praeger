@@ -25,7 +25,7 @@
   var body = querySelector('.body');
   var appbarElement = querySelector('.app-bar');
   var menuBtn = querySelector('.menu');
-  var main = querySelector('main');
+  var main = querySelector('.main');
   var footer = querySelector('.footer');
 
   function closeMenu() {
