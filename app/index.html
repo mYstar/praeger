@@ -29,6 +29,10 @@
 
 <!-- Page styles -->
 <link rel="stylesheet" href="styles/main.css">
+	<script>
+		document.createElement( "picture" );
+	</script>
+	<script src="scripts/picturefill.js" async></script>
 </head>
 
 <body>
@@ -38,12 +42,12 @@
 			<button class="menu"><img src="images/hamburger.svg" alt="Menu">
 			</button>
 			<a href="index.html">
-				<picture>
+				<picture class="logo">
 				<source media="(min-width: 990px)" srcset="images/Logo_pc.svg">
 				<source media="(min-width: 650px)" srcset="images/Logo_tablet.svg">
 				<source media="(min-width: 500px)" srcset="images/Logo_phablet.svg">
 				<source media="(max-width: 500px)" srcset="images/Logo_phone.svg">
-				<img src="images/Logo_pc.svg" alt="PRÄGER Haustechnik GmbH" class="logo">
+				<img src="images/Logo_pc.svg" alt="PRÄGER Haustechnik GmbH" >
 				</picture>
 			</a>
 			<section class="app-bar-actions">
@@ -75,6 +79,7 @@
 		<div class="image-wrap">
 			<picture>
 			<source media="(max-width: 650px)" srcset="images/shopfront_mobile.jpg, images/shopfront_mobile_x2.jpg 2x">
+			<source media="(min-width: 650px)" srcset="images/shopfront.jpg">
 			<img src="images/shopfront.jpg">
 			</picture>
 		</div>
