@@ -7,6 +7,7 @@
 	transform: translate(0px, 0);
 }
 .app-bar-container {
+	display:block;
 	max-width: $content_width;
 	align-items: center;
 	justify-content: center;
@@ -18,13 +19,11 @@
 	margin: 0;
 }
 .app-bar .logo img{
+	display: block;
 	flex: none;
-	margin: 30px;
-	padding: 0;
-	height: 180px;
-}
-.app-bar-actions {
-	float: right;
+	margin: auto;
+	padding: 30px;
+	height: 120px;
 }
 .app-bar::after {
 	content: ' ';

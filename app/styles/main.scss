@@ -106,6 +106,12 @@ html, body {
 	.content {
 		width: 49%;
 	}
+	._1, ._3, ._5 {
+		margin-right: 1.5%;
+	}
+	._2, ._4, ._6 {
+		margin-right: 0px;
+	}
 
 	.main {
 		top: $appbar_height + 8px;
@@ -118,7 +124,10 @@ html, body {
 		width: 32%;
 	}
 	._1, ._2, ._4, ._5 {
-		margin-right: 1.7%;
+		margin-right: 1.6%;
+	}
+	._3, ._6 {
+		margin-right: 0px;
 	}
 
 	.main {
