@@ -45,7 +45,7 @@ html, body {
 .section img{
 	width: 100%;
 }
-.section a{
+.section .heading{
 	background-color: $main;
 	color: $whiteprimary;
 	position: relative;
@@ -56,6 +56,10 @@ html, body {
 	margin-bottom: -57px;
 	font-weight: 300;
 	font-size: 28px;
+}
+.section a{
+	color: $main;
+	text-decoration: none;
 }
 .section p{
 	margin: 0;
@@ -112,9 +116,28 @@ html, body {
 	._2, ._4, ._6 {
 		margin-right: 0px;
 	}
-
 	.main {
 		top: $appbar_height + 8px;
+	}
+
+	.section .image-wrap{
+		width: 50%;
+		max-height: 600px;
+		float: left;
+
+		padding: 20px;
+	}
+	.section p{
+		margin-top: 141px;
+		min-height: 300px;
+
+		font-size: 22px;
+	}
+	.section .heading{
+		top: 68px;
+		left: -36px;
+		padding: 5px 20px;
+		font-size: 32px;
 	}
 }
 /** Larger Screens - desktops**/
@@ -147,4 +170,4 @@ html, body {
 	@import 'appbar_big';
 	@import 'navigation_big';
 }
-@import 'fonts'
+@import 'fonts';

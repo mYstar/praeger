@@ -1,3 +1,4 @@
+@import 'variables';
 // all stylings for the small-screen (smartphone/tablet) navigation menu
 .navdrawer-container {
 	z-index: 1;
@@ -15,7 +16,7 @@
 	-webkit-transform: translate(0, 0);
 	transform: translate(0, 0);
 }
-.app-bar, .navdrawer-container.opened, main, .footer {
+.app-bar, .navdrawer-container.opened, .main, .footer {
 	-webkit-transition: -webkit-transform 0.3s ease-out;
 	transition: transform 0.3s ease-out;
 }

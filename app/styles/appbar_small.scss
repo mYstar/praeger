@@ -1,3 +1,4 @@
+@import 'variables';
 // all stylings from the app-bar for small displays (smartphone, tablet) are here
 
 .app-bar {
@@ -25,7 +26,7 @@
 	margin: 0 auto;
 	@include shadow(2);
 }
-.app-bar.open, .app-bar.open ~ main, .app-bar.open ~ .footer {
+.app-bar.open, .app-bar.open ~ .main, .app-bar.open ~ .footer {
 	-webkit-transform: translate($navi_width, 0);
 	-ms-transform: translate($navi_width, 0);
 	transform: translate($navi_width, 0);

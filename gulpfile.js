@@ -23,6 +23,7 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var del = require('del');
+var sass = require('gulp-sass');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var pagespeed = require('psi');
@@ -39,6 +40,13 @@ var AUTOPREFIXER_BROWSERS = [
   'android >= 4.4',
   'bb >= 10'
 ];
+
+
+gulp.task('sass', function () {
+    gulp.src('./app/styles/*.scss')
+        .pipe(sass({errLogToConsole: true}))
+        .pipe(gulp.dest('./dist/styles'));
+});
 
 // Lint JavaScript
 gulp.task('jshint', function () {
