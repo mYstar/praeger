@@ -29,6 +29,7 @@ html, body {
 	min-height: 100%;
 	background-color: $blackdivide;
 }
+.page,
 .section {
 	margin-bottom: $content_margin;
 	width: 100%;
@@ -37,14 +38,17 @@ html, body {
 	display: inline-block;
 	@include shadow(1);
 }
+.page .image-wrap,
 .section .image-wrap{
 	width: 100%;
 	max-height: 500px;
 	overflow: hidden;
 }
+.page img,
 .section img{
 	width: 100%;
 }
+.page .heading,
 .section .heading{
 	background-color: $main;
 	color: $whiteprimary;
@@ -57,10 +61,12 @@ html, body {
 	font-weight: 300;
 	font-size: 28px;
 }
+.page a,
 .section a{
 	color: $main;
 	text-decoration: none;
 }
+.page p,
 .section p{
 	margin: 0;
 	padding: 20px;
@@ -120,24 +126,29 @@ html, body {
 		top: $appbar_height + 8px;
 	}
 
-	.section .image-wrap{
+	.page .image-wrap{
 		width: 50%;
 		max-height: 600px;
 		float: left;
 
-		padding: 20px;
+		margin: 20px;
 	}
-	.section p{
-		margin-top: 141px;
-		min-height: 300px;
-
+	.section p,
+	.page p{
 		font-size: 22px;
 	}
-	.section .heading{
+	.page p{
+		margin-top: 141px;
+	}
+	.page .heading{
 		top: 68px;
 		left: -36px;
 		padding: 5px 20px;
 		font-size: 32px;
+	}
+	.page .right{
+		float: right;
+		left: 36px;
 	}
 }
 /** Larger Screens - desktops**/
