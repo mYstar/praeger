@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Der offizielle Webauftritt des Meisterbetrieb Präger Haustechnik GmbH">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meisterbetrieb Präger Haustechnik GmbH</title>
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<!-- <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png"> -->
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Präger Haustechnik">
+<!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"> -->
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<!-- <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png"> -->
+<meta name="msapplication-TileColor" content="#3372DF">
+
+<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+<!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+<!-- Page styles -->
+<link rel="stylesheet" href="../styles/main.css">
+
+<!-- Photoswipe CSS file -->
+<link rel="stylesheet" href="../styles/photoswipe/photoswipe.css"> 
+
+<!-- Photoswipe Skin CSS file (styling of UI - buttons, caption, etc.)
+     In the folder of skin CSS file there are also:
+     - .png and .svg icons sprite, 
+     - preloader.gif (for browsers that do not support CSS animations) -->
+<link rel="stylesheet" href="../styles/photoswipe/default-skin.css"> 
+
+<!-- Photoswipe Core JS file -->
+<script src="../scripts/photoswipe/photoswipe.js"></script> 
+
+<!-- Photoswipe UI JS file -->
+<script src="../scripts/photoswipe/photoswipe-ui-default.js"></script> 
+
+<script>document.createElement( "picture" );</script>
+<script src="../scripts/picturefill.js" async></script>
+
+</head>
+
+<body>
+<div class="body">
+	<header class="app-bar promote-layer">
+		<div class="app-bar-container">
+			<button class="menu"><img src="../images/hamburger.svg" alt="Menu">
+			</button>
+			<a href="../index.html">
+				<picture class="logo">
+				<source media="(min-width: 990px)" srcset="../images/Logo_pc.svg">
+				<source media="(min-width: 600px)" srcset="../images/Logo_tablet.svg">
+				<source media="(min-width: 500px)" srcset="../images/Logo_phablet.svg">
+				<source media="(max-width: 500px)" srcset="../images/Logo_phone.svg">
+				<img src="../images/Logo_pc.svg" alt="PRÄGER Haustechnik GmbH" />
+				</picture>
+			</a>
+			<page class="app-bar-actions">
+			<!-- Put App Bar Buttons Here -->
+			<!--<button class="search"><img class="icon" src="images/search.svg" alt="search"></img></button> -->
+			</page>
+		</div>
+	</header>
+
+	<nav class="navdrawer-container promote-layer">
+		<h4>Navigation</h4>
+		<ul>
+			<li><a href="sanitaer.html">Sanitär</a>
+			</li>
+			<li><a href="sanitaer.html">Heizung</a>
+			</li>
+			<li><a href="sanitaer.html">Erneuerbare Energien</a>
+			</li>
+			<li><a href="gallery.html">Referenzen</a>
+			</li>
+			<li><a href="sanitaer.html">Service</a>
+			</li>
+			<li><a href="sanitaer.html">Kontakt</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="main">
+		<div class="page">
+			<div class="image-wrap" onclick="javascript:showBathGallery()">
+				<img src="../images/gallery_bad.jpg" srcset="../images/gallery_bad_x2.jpg 2x" >
+			</div>
+		<a class="heading">Bäder</a>
+		</div>
+		<div class="page">
+			<div class="image-wrap" onclick="javascript:showHeatingGallery()">
+				<img src="../images/gallery_heizung.jpg" srcset="../images/gallery_heizung_x2.jpg 2x" >
+			</div>
+		<a class="heading">Heizungen</a>
+		</div>
+	</div>
+	<div class="footer">
+		<div>
+			<a href="impressum.html">Impressum</a><br /> 
+			<a href="kontakt.html">Kontakt</a><br /> 
+		</div>
+		<div>Wir nutzen die Handwerkersoftware:<br /> 
+			<a href="http://www.handwerkersoftware-topkontor.de">Top Kontor</a>
+		</div>
+		<div>Präger Haustechnik GmbH Alle Rechte vorbehalten</div>
+	</div>
+
+</div>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- build:js scripts/main.min.js -->
+<script src="../scripts/main.js"></script>
+<script src="../scripts/gallery.js"></script>
+<!-- endbuild -->
+
+</body>
+
+</html>
