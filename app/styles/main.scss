@@ -30,6 +30,7 @@ html, body {
 	background-color: $blackdivide;
 }
 .page,
+.gallery,
 .section {
 	margin-bottom: $content_margin;
 	width: 100%;
@@ -39,34 +40,42 @@ html, body {
 	@include shadow(1);
 }
 .page .image-wrap,
+.gallery .image-wrap,
 .section .image-wrap{
 	width: 100%;
 	max-height: 500px;
 	overflow: hidden;
 }
 .page img,
+.gallery img,
 .section img{
 	width: 100%;
 }
 .page .heading,
+.gallery .heading,
 .section .heading{
 	background-color: $main;
 	color: $whiteprimary;
 	position: relative;
 	float: left;
-	top: -80px;
+	top: -100px;
 	left: -5px;
 	padding: 5px 20px;
 	margin-bottom: -57px;
 	font-weight: 300;
 	font-size: 28px;
 }
+.top-heading-wrap{
+	display:none;
+}	
 .page a,
+.gallery a,
 .section a{
 	color: $main;
 	text-decoration: none;
 }
 .page p,
+.gallery p,
 .section p{
 	margin: 0;
 	padding: 20px;
@@ -113,8 +122,9 @@ html, body {
 
 /** Larger Screens - tablets**/
 @media all and (min-width: 600px){
-	.content {
-		width: 49%;
+	.content,
+	.gallery{
+		width: 48.75%;
 	}
 	._1, ._3, ._5 {
 		margin-right: 1.5%;
@@ -150,11 +160,25 @@ html, body {
 		float: right;
 		left: 36px;
 	}
+	.top-heading{
+		float: left;
+		background-color: $main;
+		color: $whiteprimary;
+		padding: 5px 20px;
+		font-weight: 300;
+		font-size: 32px;
+		@include shadow(1);
+	}
+	.top-heading-wrap{
+		display:block;
+		margin-bottom: 16px;
+	}	
 }
 /** Larger Screens - desktops**/
 
 @media all and (min-width: 990px) {
-	.content {
+	.content,
+	.gallery{
 		width: 32%;
 	}
 	._1, ._2, ._4, ._5 {
