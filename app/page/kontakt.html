@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Der offizielle Webauftritt des Meisterbetrieb Präger Haustechnik GmbH">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meisterbetrieb Präger Haustechnik GmbH</title>
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<!-- <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png"> -->
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Präger Haustechnik">
+<!-- <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"> -->
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<!-- <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png"> -->
+<meta name="msapplication-TileColor" content="#3372DF">
+
+<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+<!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+<!-- Page styles -->
+<link rel="stylesheet" href="../styles/main.css">
+	<script>
+		document.createElement( "picture" );
+	</script>
+	<script src="../scripts/picturefill.js" async></script>
+</head>
+
+<body>
+<div class="body">
+	<header class="app-bar promote-layer">
+		<div class="app-bar-container">
+			<button class="menu"><img src="../images/hamburger.svg" alt="Menu">
+			</button>
+			<a href="../index.html">
+				<picture class="logo">
+				<source media="(min-width: 990px)" srcset="../images/Logo_pc.svg">
+				<source media="(min-width: 600px)" srcset="../images/Logo_tablet.svg">
+				<source media="(min-width: 500px)" srcset="../images/Logo_phablet.svg">
+				<source media="(max-width: 500px)" srcset="../images/Logo_phone.svg">
+				<img src="../images/Logo_pc.svg" alt="PRÄGER Haustechnik GmbH" />
+				</picture>
+			</a>
+			<page class="app-bar-actions">
+				<!-- Put App Bar Buttons Here -->
+				<!--<button class="search"><img class="icon" src="images/search.svg" alt="search"></img></button> -->
+			</page>
+		</div>
+	</header>
+
+	<nav class="navdrawer-container promote-layer">
+		<h4>Navigation</h4>
+		<ul>
+			<li><a href="sanitaer.html">Sanitär</a>
+			</li>
+			<li><a href="sanitaer.html">Heizung</a>
+			</li>
+			<li><a href="sanitaer.html">Erneuerbare Energien</a>
+			</li>
+			<li><a href="gallery.html">Referenzen</a>
+			</li>
+			<li><a href="sanitaer.html">Service</a>
+			</li>
+			<li><a href="sanitaer.html">Kontakt</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="main">
+		<div class="contact">
+				<a class="heading">Telefon</a>
+				<p> 03491 / 42 98 00 </p>
+				<a class="heading">Anschrift</a>
+				<p> 
+				Präger Haustechnik GmbH </br>
+				Nussbaumweg 7-9 </br>
+				06886 Lutherstadt Wittenberg </br>
+				</p>
+				<a class="heading">Lageplan</a>
+					<div class="map-canvas"></div>
+				<a class="heading">Kontaktformular</a>
+				<form>
+					<label for="betreff">Betreff</label>
+					<input type="text" id="betreff" placeholder="Beratungstermin"></br>
+
+					<label for="name">Name</label>
+					<input type="text" id="name" placeholder="Mustermann"></br>
+					
+					<label for="vorname">Vorname</label>
+					<input type="text" id="vorname" placeholder="Max"></br>
+
+					<label for="telefon">Telefonnummer</label>
+					<input type="tel" id="telefon" placeholder="0171 123456"></br>
+
+					<label for="email">E-Mail</label>
+					<input type="email" id="email" placeholder="email@beispiel.de"></br>
+
+					<label for="nachricht">Nachricht</label>
+					<textarea id="nachricht" rows="10">
+					</textarea></br>
+
+					<input type="submit" value="Absenden">
+				</form>
+		</div>
+	</div>
+
+<div class="footer">
+	<div>
+		<a href="impressum.html">Impressum</a><br /> 
+		<a href="kontakt.html">Kontakt</a><br /> 
+	</div>
+	<div>Wir nutzen die Handwerkersoftware:<br /> 
+		<a href="http://www.handwerkersoftware-topkontor.de">Top Kontor</a>
+	</div>
+	<div>Präger Haustechnik GmbH Alle Rechte vorbehalten</div>
+</div>
+
+<!-- build:js scripts/main.min.js -->
+	<script src="../scripts/main.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script>
+		function initialize() {
+			var querySelector = document.querySelector.bind(document);
+
+			var mapCanvas = querySelector('.map-canvas');
+			var myLatlng = new google.maps.LatLng(51.871967, 12.612461);
+			var mapOptions = {
+				center: myLatlng,
+				zoom: 15,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+    			}
+    			var map = new google.maps.Map(mapCanvas, mapOptions);
+			var marker = new google.maps.Marker({
+			      position: myLatlng,
+			      map: map,
+			      title: 'Präger Haustechnik'
+			  });
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+<!-- endbuild -->
+
+</div>
+</body>
+
+</html>
