@@ -137,17 +137,48 @@ html, body {
 }
 form label{
 	display: inline-block;
-	margin-top: 20px;
-	margin-left: 20px;
-	font-size: 18px;
+	margin: 15px 0 5px 20px;
+
+	font-size: 20px;
+	font-weight: 700;
+	color: $mainlight;
 }
 textarea{
 	width: 90%;
-	margin-left: 8px;
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 16px;
 }
 input{
 	width: 90%;
-	margin-left: 8px;
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	font-size: 18px;
+}
+input[type=submit]{
+	background: $mainlight;
+	color: $whiteprimary;
+
+	height:36px;
+	border: none;
+	-webkit-border-radius: 5px; //For Safari, etc.
+	-moz-border-radius: 5px; //For Mozilla, etc.
+	border-radius: 5px; //CSS3 Feature
+}
+input[type=submit]:hover{
+	background: $mainhover;
+}
+input[type=submit]:focus{
+	background: $main;
+	outline: 0;
+}
+input[type=submit]:active{
+	background: $mainactive;
 }
 @import 'appbar_small';
 @import 'navigation_small';

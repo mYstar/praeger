@@ -87,28 +87,29 @@
 				<a class="heading">Lageplan</a>
 					<div class="map-canvas"></div>
 				<a class="heading">Kontaktformular</a>
-				<form>
+				<form id="ajax-contact" action="mailer.php" method="post">
 					<label for="betreff">Betreff</label>
-					<input type="text" id="betreff" placeholder="Beratungstermin"></br>
+					<input type="text" id="betreff" name="betreff" placeholder="Bsp.: Beratungstermin">
 
 					<label for="name">Name</label>
-					<input type="text" id="name" placeholder="Mustermann"></br>
+					<input type="text" id="name" placeholder="Mustermann" name="lname" autocomplete="family-name" required>
 					
 					<label for="vorname">Vorname</label>
-					<input type="text" id="vorname" placeholder="Max"></br>
+					<input type="text" id="vorname" placeholder="Max" name="fname" autocomplete="given-name">
 
 					<label for="telefon">Telefonnummer</label>
-					<input type="tel" id="telefon" placeholder="0171 123456"></br>
+					<input type="tel" id="telefon" placeholder="0171 123456" name="phone" autocomplete="tel">
 
 					<label for="email">E-Mail</label>
-					<input type="email" id="email" placeholder="email@beispiel.de"></br>
+					<input type="email" id="email" placeholder="email@beispiel.de" name="email" autocomplete="email" required>
 
 					<label for="nachricht">Nachricht</label>
-					<textarea id="nachricht" rows="10">
-					</textarea></br>
+					<textarea id="nachricht" name="nachricht" rows="10" required>
+					</textarea>
 
 					<input type="submit" value="Absenden">
 				</form>
+				<div id="form-messages"></div>
 		</div>
 	</div>
 
@@ -124,7 +125,9 @@
 </div>
 
 <!-- build:js scripts/main.min.js -->
+	<script src="../script/jquery-2.1.3.min.js"></script>
 	<script src="../scripts/main.js"></script>
+	<script src="../scripts/mail.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script>
 		function initialize() {
