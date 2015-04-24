@@ -1,0 +1,51 @@
+.app-bar {
+  position: relative;
+}
+
+.app-bar.open, .app-bar.open ~ main {
+  -webkit-transform: translate(0px, 0);
+  -ms-transform: translate(0px, 0);
+      transform: translate(0px, 0);
+}
+
+.app-bar-container {
+  display: block;
+  max-width: 1400px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  box-shadow: none;
+}
+
+.app-bar a {
+  margin: 0;
+}
+
+.app-bar .logo img {
+  display: block;
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
+  margin: auto;
+  padding: 30px;
+  height: 120px;
+}
+
+.app-bar::after {
+  content: ' ';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+button.menu {
+  display: none;
+}

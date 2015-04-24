@@ -28,6 +28,7 @@ var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var pagespeed = require('psi');
 var reload = browserSync.reload;
+var connect = require('gulp-connect-php');
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -98,7 +99,7 @@ gulp.task('styles', function () {
         console.error('Error!', err.message);
       })
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
-    .pipe(gulp.dest('.tmp/styles'))
+    .pipe(gulp.dest('app/styles'))
     // Concatenate And Minify Styles
     .pipe($.if('*.css', $.csso()))
     .pipe(gulp.dest('dist/styles'))
@@ -146,14 +147,10 @@ gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 // Watch Files For Changes & Reload
 gulp.task('serve', ['styles'], function () {
-  browserSync({
-    notify: false,
-    // Run as an https by uncommenting 'https: true'
-    // Note: this uses an unsigned certificate which on first access
-    //       will present a certificate warning in the browser.
-    // https: true,
-    server: ['.tmp', 'app']
-  });
+  connect.server({
+  	base: './app',
+	open:true 
+  	});
 
   gulp.watch(['app/**/*.html'], reload);
   gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);

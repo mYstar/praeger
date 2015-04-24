@@ -39,6 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		echo "Vielen Dank für Ihre Nachricht. Wir setzen uns so bald wie möglich mit Ihnen in Verbindung.";
 	} else {
 		// Set a 500 (internal server error) response code.
+		$error = error_get_last();
+		echo $error["message"];
 		http_response_code(500);
 		echo "Leider konnte wegen eines internen Fehlers die Nachricht nicht gesendet werden. Bitte versuchen Sie es später noch einmal oder senden Sie eine E-Mail an: $recipient";
 	}
